@@ -1,6 +1,10 @@
 import React from 'react';
 import "./App.css"
 import TaskForm from './components/TaskForm';
+import TaskColumn from './components/TaskColumn';
+import todoIcon from './assets/arrow1.png';
+import progressIcon from './assets/star.png';
+import completeIcon from './assets/tick.png';
 
 function App() {
   return (
@@ -8,9 +12,10 @@ function App() {
       
       <TaskForm/>
       <main className='app_main'>
-        <section className='task_column'>Section 1</section>
-        <section className='task_column'>Section 2</section>
-        <section className='task_column'>Section 3</section>
+        <TaskColumn title="To do" icon={todoIcon}  />
+        <TaskColumn title="In progress" icon={progressIcon}  />
+        <TaskColumn title="Completed" icon={completeIcon}  />
+       
       </main>
     </div>
   )
